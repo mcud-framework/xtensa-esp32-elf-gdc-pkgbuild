@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Prepare
         run: |
-          pacman -Syu --noconfirm --needed gmp mpfr zlib libmpc wget
+          pacman -Syu --noconfirm --needed gmp mpfr zlib libmpc wget gdc
           wget https://github.com/seeseemelk/xtensa-esp32-elf-binutils-pkgbuild/releases/download/v2.35-1/xtensa-esp32-elf-binutils-2.35-1-x86_64.pkg.tar.zst
           wget https://github.com/seeseemelk/xtensa-esp32-elf-newlib-pkgbuild/releases/download/v3.0.0-2/xtensa-esp32-elf-newlib-3.0.0-2-x86_64.pkg.tar.zst
           wget https://github.com/seeseemelk/xtensa-esp32-elf-gcc-bootstrap-pkgbuild/releases/download/v12.0.0-1/xtensa-esp32-elf-gcc-bootstrap-12.0.0-1-x86_64.pkg.tar.zst
