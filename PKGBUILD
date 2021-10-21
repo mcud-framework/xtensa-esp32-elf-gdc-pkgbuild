@@ -87,6 +87,11 @@ _build_gcc() {
 }
 
 build() {
+  CFLAGS=${CFLAGS/-Wformat/}
+  CFLAGS=${CFLAGS/-Werror=format-security/}
+  CXXFLAGS=${CXXFLAGS/-Wformat/}
+  CXXFLAGS=${CXXFLAGS/-Werror=format-security/}
+
 	cd "$srcdir"/build-gcc
 	export CFLAGS_FOR_TARGET='-g -Os -ffunction-sections -fdata-sections -mlongcalls'
 	export CXXFLAGS_FOR_TARGET='-g -Os -ffunction-sections -fdata-sections -mlongcalls'
